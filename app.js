@@ -14,11 +14,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
+let posts = [];
+
+
 app.get("/", function(req,res){
   res.render("home", {
     homeStartingContentejs: homeStartingContent
   });
 });
+
+
+app.get("/", function(req,res){
+  res.render("home",{
+    newPost: posts 
+  })
+})
 
 
 app.get("/about", function(req,res){
@@ -42,12 +52,13 @@ app.get("/compose", function(req,res){
 
 app.post("/compose", function(req,res){
 
-
-
-  const post = {
+    const post = {
     title: req.body.postTitle,
     body: req.body.postBody
   };
+
+  posts.push(post);
+  res.redirect("/");
 
 });
 

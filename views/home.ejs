@@ -4,4 +4,12 @@
 
 <p><%=homeStartingContentejs%></p>
 
+<% for (var i=0; i<newPost.length; i++ ){ %> 
+
+    <div class="item">
+        <p> <%=newPost[i] %></p>
+    </div>
+
+ <% } %>
+
 <%- include("partials/footer"); %>
