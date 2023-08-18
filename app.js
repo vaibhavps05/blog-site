@@ -19,16 +19,10 @@ let posts = [];
 
 app.get("/", function(req,res){
   res.render("home", {
-    homeStartingContentejs: homeStartingContent
+    homeStartingContentejs: homeStartingContent,
+    newPost: posts 
   });
 });
-
-
-app.get("/", function(req,res){
-  res.render("home",{
-    newPost: posts 
-  })
-})
 
 
 app.get("/about", function(req,res){
