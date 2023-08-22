@@ -4,6 +4,16 @@
 
 <p><%=homeStartingContentejs%></p>
 
-<%=newPost%>
 
+
+
+<% for (var i=0; i<newPost.length; i++ ){ %>
+    
+    <%= console.log(newPost[i].title); %>
+    
+ <% }%> 
+
+
+
+    
 <%- include("partials/footer"); %>
