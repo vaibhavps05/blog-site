@@ -6,12 +6,16 @@
 
 
 
+<% newPost.forEach(function (post) { %>
 
-<% for (var i=0; i<newPost.length; i++ ){ %>
+ <h1><%= post.title %></h1>
+ <p><%= post.body %></p>
+
+<% }); %>
     
-    <%= console.log(newPost[i].title); %>
     
- <% }%> 
+    
+ 
 
 
 
