@@ -57,6 +57,23 @@ app.post("/compose", function(req,res){
 });
 
 
+app.get("/post/:topic", function(req,res){
+
+  const requestedTitle = req.params.topic;
+
+  posts.forEach(function(post){
+    const storedTitle = post.title;
+
+    if (requestedTitle == storedTitle) {
+      console.log("Match found!");
+    } else {
+      console.log("Incorrect!");
+    }
+
+
+  });
+
+});
 
 
 
