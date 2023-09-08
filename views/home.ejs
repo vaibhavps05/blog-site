@@ -5,17 +5,16 @@
 <p><%=homeStartingContentejs%></p>
 
 
-
 <% newPost.forEach(function (post) { %>
 
- <h1><%= post.title %></h1>
- <p><%= post.body %></p>
+    <h1><%= post.title %></h1>
+    <p><%= post.body.substring(0,100) + "..." %> <a href="/post/<%= post.title %>">Read more</a> </p>
+   
+   <% }); %>
 
-<% }); %>
-    
-    
-    
- 
+
+
+
 
 
 
